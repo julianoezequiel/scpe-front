@@ -1,26 +1,26 @@
-(function ()
-{
-    'use strict';
+(function() {
+  'use strict';
 
-    /**
-     * Main module of the Fuse
-     */
-    angular
-        .module('fuse', [
+  /**
+   * Main module of the Fuse
+   */
+  angular
+    .module('fuse', [
 
-            // Core
-            'app.core',
+      // Core
+      'app.core',
 
-            // Navigation
-            'app.navigation',
+      // Navigation
+      'app.navigation',
 
-            // Toolbar
-            'app.toolbar',
+      // Toolbar
+      'app.toolbar',
 
-            // Quick panel
-            'app.quick-panel',
+      // Quick panel
+      'app.quick-panel',
 
-            'app.dashboards',
-            'app.cadastros'
-        ]);
+      'app.dashboards',
+      'app.cadastros',
+      'app.arquivos-fiscais'
+    ]);
 })();
