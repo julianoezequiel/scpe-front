@@ -20,10 +20,7 @@
             // Quick panel
             'app.quick-panel',
 
-            // Sample
-            // 'app.sample',
-
             'app.dashboards',
-            'app.empresa'
+            'app.cadastros'
         ]);
 })();

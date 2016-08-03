@@ -3,7 +3,7 @@
     'use strict';
 
     angular
-        .module('app.empresa', [])
+        .module('app.cadastros', [])
         .config(config);
 
     /** @ngInject */
@@ -22,17 +22,10 @@
             });
 
         // Translation
-        $translatePartialLoaderProvider.addPart('app/main/empresa');
+        $translatePartialLoaderProvider.addPart('app/main');
 
         // Api
         msApiProvider.register('empresa', ['app/data/sample/sample.json']);
-
-        // Navigation
-        // msNavigationServiceProvider.saveItem('cadastro', {
-        //     title : 'Cadastro',
-        //     group : true,
-        //     weight: 1
-        // });
 
         msNavigationServiceProvider.saveItem('cadastro', {
             title    : 'Cadastros',
@@ -55,7 +48,7 @@
             weight   : 1
         });
 
-      
+
         msNavigationServiceProvider.saveItem('cadastro.departamento', {
             title: 'Departamento',
             state: 'app.cadastro_departamento',
