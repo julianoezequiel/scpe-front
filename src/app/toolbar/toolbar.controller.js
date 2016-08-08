@@ -45,8 +45,8 @@
             }
         ];
         vm.languages = {
-             pt: {
-                'title'      : 'Brasil',
+             br: {
+                'title'      : 'Portugues',
                 'translation': 'TOOLBAR.BRASIL',
                 'code'       : 'br',
                 'flag'       : 'br'

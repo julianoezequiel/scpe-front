@@ -3,12 +3,38 @@
     'use strict';
 
     angular
-        .module('app.cadastros', ['app.empresas','app.ui.icons'])
+        .module('app.empresas', [])
         .config(config);
 
     /** @ngInject */
     function config($stateProvider, $translatePartialLoaderProvider, msApiProvider, msNavigationServiceProvider)
     {
+        // State
+        $stateProvider
+            .state('app.empresa', {
+                url    : '/cadastro/empresa',
+                views  : {
+                    'content@app': {
+                        templateUrl: 'app/main/cadastros/empresas/empresa.html',
+                        controller : 'EmpresaController as vm'
+                    }
+                }
+            })
+            .state('app.empresa.add', {
+                url    : '/cadastro/empresa',
+                views  : {
+                    'content@app': {
+                        templateUrl: 'app/main/cadastros/empresas/empresa-gerenciamento.html',
+                        controller : 'EmpresaControllerAdd as vm'
+                    }
+                }
+            });
+
+        // Translation
+        $translatePartialLoaderProvider.addPart('app/main/cadastros/empresas');
+
+        // Api
+        msApiProvider.register('empresa', ['app/data/sample/sample.json']);
 
         msNavigationServiceProvider.saveItem('cadastro', {
             title    : 'Cadastros',
@@ -50,7 +76,7 @@
 
         msNavigationServiceProvider.saveItem('cadastro.grupos', {
             title: 'Grupos de Acesso',
-            state: 'app.ui_icons',
+            state: 'app.cadastro_grupos_acesso',
             translate: 'SIDE_BAR.NAV_GRUPO_ACESSO',
             icon:"icon-account-multiple"
 

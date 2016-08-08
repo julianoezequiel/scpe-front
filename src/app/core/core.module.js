@@ -14,7 +14,8 @@
                 'ngMaterial',
                 'pascalprecht.translate',
                 'ui.router',
-                'ngStorage'
+                'ngStorage',
+                'md.data.table'
 
             ]);
 })();

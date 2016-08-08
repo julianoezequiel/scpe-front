@@ -22,7 +22,7 @@
         $translateProvider.useLoader('$translatePartialLoader', {
             urlTemplate: '{part}/i18n/{lang}.json'
         });
-        $translateProvider.preferredLanguage('en');
+        $translateProvider.preferredLanguage('br');
         $translateProvider.useSanitizeValueStrategy('sanitize');
 
         /*eslint-disable */
