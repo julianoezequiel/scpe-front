@@ -3,11 +3,12 @@
 
   angular
     .module('app.empresas')
-    .controller('EmpresaControllerAdd', EmpresaControllerAdd);
+    .controller('EmpresaControllerEdt', EmpresaControllerEdt);
 
+  EmpresaControllerEdt.$inject = ['$mdEditDialog', '$rootScope', '$timeout'];
 
   /** @ngInject */
-  function EmpresaControllerAdd() {
+  function EmpresaControllerEdt($mdEditDialog, $rootScope, $timeout) {
     var vm = this;
     vm.id_empresas = 'BREADCRUMB.EMPRESAS';
     vm.id_cadastros = 'BREADCRUMB.CADASTROS';

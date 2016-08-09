@@ -23,7 +23,7 @@
             urlTemplate: '{part}/i18n/{lang}.json'
         });
         $translateProvider.preferredLanguage('br');
-        $translateProvider.useSanitizeValueStrategy('sanitize');
+        $translateProvider.useSanitizeValueStrategy(null);
 
         /*eslint-disable */
 

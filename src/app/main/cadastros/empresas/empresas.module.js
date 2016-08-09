@@ -28,6 +28,15 @@
                         controller : 'EmpresaControllerAdd as vm'
                     }
                 }
+            })
+            .state('app.empresa.edt', {
+                url    : '/cadastro/empresa/:id',
+                views  : {
+                    'content@app': {
+                        templateUrl: 'app/main/cadastros/empresas/empresa-gerenciamento.html',
+                        controller : 'EmpresaControllerEdt as vm'
+                    }
+                }
             });
 
         // Translation

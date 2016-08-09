@@ -5,48 +5,72 @@
     .module('app.empresas')
     .controller('EmpresaController', EmpresaController);
 
-  EmpresaController.$inject = ['$mdEditDialog', '$rootScope','$timeout'];
+  EmpresaController.$inject = ['$mdEditDialog', '$rootScope', '$timeout'];
 
   /** @ngInject */
-  function EmpresaController($mdEditDialog, $rootScope,$timeout) {
+  function EmpresaController($mdEditDialog, $rootScope, $timeout) {
     var vm = this;
 
+    vm.id_empresas = 'BREADCRUMB.EMPRESAS';
+    vm.id_cadastros = 'BREADCRUMB.CADASTROS';
+    vm.id_voltar = 'CRUD.VOLTAR';
+    vm.id_campoObrigatorio = 'CRUD.CAMPO-OBRIGATORIO';
+    vm.id_editar = 'CRUD.EDITAR';
+    vm.id_recarregar = 'CRUD.RECARREGAR';
+    vm.id_excluir = 'CRUD.EXCLUIR';
+    vm.id_adicionar= 'CRUD.ADICIONAR';
+    vm.id_buscar = 'CRUD.BUSCAR';
+    vm.id_buscaEmpresas = 'CRUD.BUSCAR-EMPRESAS';
+    vm.id_selecionada = 'CRUD.SELECIONADA';
+    vm.id_razaoSocial = 'CAD_EMPRESA.RAZAO-SOCIAL';
     // Data
     vm.helloText = "Empresa";
     vm.empresas = [{
+      idEmpresa: '01',
       rasaoSocial: 'Empresa 00',
       documento: '000000000'
     }, {
+      idEmpresa: '02',
       rasaoSocial: 'Empresa 01',
       documento: '000000011'
     }, {
+      idEmpresa: '03',
       rasaoSocial: 'Empresa 02',
       documento: '000000022'
     }, {
+      idEmpresa: '04',
       rasaoSocial: 'Empresa 03',
       documento: '000000033'
     }, {
+      idEmpresa: '05',
       rasaoSocial: 'Empresa 04',
       documento: '000000044'
     }, {
+      idEmpresa: '06',
       rasaoSocial: 'Empresa 05',
       documento: '000000055'
-    },{
+    }, {
+      idEmpresa: '07',
       rasaoSocial: 'Empresa 06',
       documento: '000000000'
     }, {
+      idEmpresa: '08',
       rasaoSocial: 'Empresa 07',
       documento: '000000011'
     }, {
+      idEmpresa: '09',
       rasaoSocial: 'Empresa 08',
       documento: '000000022'
     }, {
+      idEmpresa: '10',
       rasaoSocial: 'Empresa 09',
       documento: '000000033'
     }, {
+      idEmpresa: '11',
       rasaoSocial: 'Empresa 10',
       documento: '000000044'
     }, {
+      idEmpresa: '12',
       rasaoSocial: 'Empresa 11',
       documento: '000000055'
     }];
