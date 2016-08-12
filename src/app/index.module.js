@@ -21,6 +21,7 @@
 
       'app.dashboards',
       'app.cadastros',
-      'app.arquivos-fiscais'
+      'app.arquivos-fiscais',
+      'app.pages.auth.login'
     ]);
 })();

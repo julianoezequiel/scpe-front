@@ -1,18 +1,20 @@
-(function ()
-{
-    'use strict';
+(function() {
+  'use strict';
 
-    angular
-        .module('app.pages.auth.login')
-        .controller('LoginController', LoginController);
+  angular
+    .module('app.pages.auth.login')
+    .controller('LoginController', LoginController);
 
-    /** @ngInject */
-    function LoginController()
-    {
-        // Data
+  /** @ngInject */
+  function LoginController($rootScope) {
+    // Data
+    var vm = this;
 
-        // Methods
+    vm.entrar = function() {
+        $rootScope.state.go('app.dashboards_main');
+      }
+      // Methods
 
-        //////////
-    }
+    //////////
+  }
 })();

@@ -11,7 +11,7 @@
     {
         $locationProvider.html5Mode(true);
 
-        $urlRouterProvider.otherwise('/cadastro/empresa');
+        $urlRouterProvider.otherwise('/login');
 
         /**
          * Layout Style Switcher

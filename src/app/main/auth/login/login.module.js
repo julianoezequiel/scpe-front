@@ -11,14 +11,14 @@
     {
         // State
         $stateProvider.state('app.pages_auth_login', {
-            url      : '/pages/auth/login',
+            url      : '/login',
             views    : {
                 'main@'                       : {
                     templateUrl: 'app/core/layouts/content-only.html',
                     controller : 'MainController as vm'
                 },
                 'content@app.pages_auth_login': {
-                    templateUrl: 'app/main/pages/auth/login/login.html',
+                    templateUrl: 'app/main/auth/login/login.html',
                     controller : 'LoginController as vm'
                 }
             },
@@ -26,7 +26,7 @@
         });
 
         // Translation
-        $translatePartialLoaderProvider.addPart('app/main/pages/auth/login');
+        $translatePartialLoaderProvider.addPart('app/main/auth/login');
 
         // Navigation
         msNavigationServiceProvider.saveItem('pages.auth', {
